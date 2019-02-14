@@ -9,17 +9,8 @@
 #define ANGLE40 0x20DF28D7
 #define ANGLE50 0x20DFA857
 #define ANGLE60 0x20DF6897
-//#define ANGLE70 0x20DFE817
-//#define ANGLE80 0x20DF18E7
-//#define ANGLE90 0x20DF9867
 #define DOWN 0x20DFC03F
 #define UP 0x20DF40BF
-#define FORWARD 0x20DF02FD
-#define LEFT 0x20DFE01F
-#define RIGHT 0x20DF609F
-#define STOP 0x20DF22DD
-#define BACKWARD 0x20DF827D
-#define LINE 0x20DF08F7
 
 int RECV_PIN = 9;
 IRrecv irrecv(RECV_PIN);
@@ -82,11 +73,6 @@ void loop()
       case DOWN:
         digitalWrite(diod_pin, 1);
         backward_t(10000000);
-        digitalWrite(diod_pin, 0);
-        break;
-      case RIGHT:
-        digitalWrite(diod_pin, 1);
-        Angle_t(100000000);
         digitalWrite(diod_pin, 0);
         break;
     }
